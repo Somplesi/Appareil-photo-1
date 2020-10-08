@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +39,17 @@
                                     <action selector="prendrePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEL-7g-6RU"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Editing Mode" translatesAutoresizingMaskIntoConstraints="NO" id="Bqe-tg-OCb">
+                                <rect key="frame" x="16" y="605.5" width="51" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bqe-tg-OCb" secondAttribute="height" multiplier="47:31" id="OZV-y7-EBJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="editingSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="DA3-po-PBG"/>
+                                </connections>
+                            </switch>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cqR-IJ-DGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9zg-3A-v0K"/>
@@ -52,8 +61,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSq-eG-1py" secondAttribute="trailing" constant="16" id="bxq-K7-YtW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cqR-IJ-DGc" secondAttribute="trailing" constant="20" id="nEU-3r-aAK"/>
                             <constraint firstItem="cqR-IJ-DGc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qdo-OT-FJm"/>
+                            <constraint firstItem="Bqe-tg-OCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wlK-23-ktv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bqe-tg-OCb" secondAttribute="bottom" constant="29" id="xSq-l3-kMI"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="imageViewChoisie" destination="rpn-iM-s7I" id="N2F-wC-Tky"/>
